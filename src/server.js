@@ -2,6 +2,8 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import configViewEngine from './configs/viewEngine'
 import intWebRoute from './route/web'
+import connection from './configs/connectDB'
+
 require('dotenv').config();
 
 const app = express();

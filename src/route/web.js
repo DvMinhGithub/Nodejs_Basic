@@ -5,7 +5,7 @@ let router = express.Router()
 const intWebRoute = (app) => {
     router.get('/', homeController.getHomePage)
 
-    return app.use('/api/v1', router)
+    return app.use('/', router)
 }
 
 module.exports = intWebRoute
