@@ -5,10 +5,10 @@ let getHomePage = (req, res) => {
     connection.query(
         'SELECT * FROM `users` ',
         function (err, results, fields) {
-            data = results.map(row => { return row }) 
-             res.render('index.ejs', { dataUser: JSON.stringify(data) })
+            data = results.map(row => { return row })
+            res.render('index.ejs', { dataUser: data })
         });
-  
+
 }
 
 export default {

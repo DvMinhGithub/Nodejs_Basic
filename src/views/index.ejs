@@ -5,13 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NodeJs Basic</title>
     <link type="text/css" rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="https://goeco.link/GnDrD" type="image/x-icon">
 </head>
 
 <body>
-    <h1>Hello world from ejs</h1>
-    <%= dataUser %>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+    <table id="myTable">
+        <thead>
+            <tr class="header">
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th colspan="3">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i=0; i < dataUser.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= dataUser[i].id %>
+                    </td>
+                    <td>
+                        <%= dataUser[i].firstName %>
+                    </td>
+                    <td>
+                        <%= dataUser[i].lastName %>
+                    </td>
+                    <td> <a href="/detail/user/<%= dataUser[i].id %>">Detail</a>
+                    </td>
+                    <td>
+                        <a href="/Edit/user/<%= dataUser[i].id %>">Edit</a>
+                    </td>
+                    <td>
+                        <a href="/Delete/user/<%= dataUser[i].id %>">Delete</a>
+                    </td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
 </body>
 
 </html>
