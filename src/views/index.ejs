@@ -43,10 +43,15 @@
                             <td> <a href="/detail/user/<%= dataUser[i].id %>">Detail</a>
                             </td>
                             <td>
-                                <a href="/Edit/user/<%= dataUser[i].id %>">Edit</a>
+                                <form action="/edit/user/<%= dataUser[i].id %>" method="get">
+                                    <button type="submit">Edit</button>
+                                </form>
                             </td>
                             <td>
-                                <a href="/Delete/user/<%= dataUser[i].id %>">Delete</a>
+                                <form action="/delete/user" method="post">
+                                    <input type="hidden" name="id" value="<%= dataUser[i].id %>" />
+                                    <button type="submit">Delete</button>
+                                </form>
                             </td>
                         </tr>
                         <% } %>
