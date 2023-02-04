@@ -1,22 +1,26 @@
 {
-  "name": "nodejsbasic",
-  "version": "1.0.0",
-  "main": "server.js",
-  "repository": "https://github.com/dvminh-it/NodeJs_Basic.git",
-  "author": "dvminh-it <dvminh.it@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "start": "nodemon --exec babel-node src/server.js"
-  },
-  "dependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/node": "^7.20.7",
-    "@babel/preset-env": "^7.20.2",
-    "body-parser": "^1.20.1",
-    "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
-    "express": "^4.18.2",
-    "mysql2": "^3.1.0",
-    "nodemon": "^2.0.20"
-  }
+    "name": "nodejsbasic",
+    "version": "1.0.0",
+    "main": "server.js",
+    "repository": "https://github.com/dvminh-it/NodeJs_Basic.git",
+    "author": "dvminh-it <dvminh.it@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "nodemon --exec babel-node src/server.js",
+        "format": "prettier --single-quote --trailing-comma all --write --tab-width 4 package.json ./src/**/*.js"
+    },
+    "dependencies": {
+        "@babel/core": "^7.20.12",
+        "@babel/node": "^7.20.7",
+        "@babel/preset-env": "^7.20.2",
+        "body-parser": "^1.20.1",
+        "dotenv": "^16.0.3",
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "mysql2": "^3.1.0",
+        "nodemon": "^2.0.20"
+    },
+    "devDependencies": {
+        "prettier": "^2.8.3"
+    }
 }

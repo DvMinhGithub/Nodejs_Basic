@@ -1,6 +1,7 @@
 import express from 'express';
-import configViewEngine from './configs/viewEngine'
-import intWebRoute from './route/web'
+import configViewEngine from './configs/viewEngine';
+import intWebRoute from './route/web';
+import intAPIRoute from './route/api';
 
 require('dotenv').config();
 
@@ -8,14 +9,17 @@ const app = express();
 const PORT = process.env.PORT || 8081;
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 // setup view engine
-configViewEngine(app)
+configViewEngine(app);
 
 //setup routes
-intWebRoute(app)
+intWebRoute(app);
 
-app.listen(PORT,() => {
-     console.log(`Start at http://localhost:${PORT}`);
-})
+// init api route
+intAPIRoute(app);
+
+app.listen(PORT, () => {
+    console.log(`Start at http://localhost:${PORT}`);
+});
