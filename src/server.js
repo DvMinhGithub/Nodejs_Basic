@@ -21,6 +21,11 @@ intWebRoute(app);
 // init api route
 intAPIRoute(app);
 
+//handle 404 not found
+app.use((req, res) => {
+    return res.render('404.ejs')
+})
+
 app.listen(PORT, () => {
     console.log(`Start at http://localhost:${PORT}`);
 });
