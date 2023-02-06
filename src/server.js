@@ -2,7 +2,7 @@ import express from 'express';
 import configViewEngine from './configs/viewEngine';
 import intWebRoute from './route/web';
 import intAPIRoute from './route/api';
-import mutler from 'multer'
+import mutler from 'multer';
 
 require('dotenv').config();
 

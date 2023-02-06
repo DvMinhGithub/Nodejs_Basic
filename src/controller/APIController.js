@@ -50,7 +50,7 @@ let deleteUser = async (req, res) => {
     await pool.execute('delete from users where id = ?', [userId]);
     return res.status(200).json({
         message: 'ok',
-        data: userId
+        data: userId,
     });
 };
 
@@ -60,5 +60,3 @@ module.exports = {
     updateUser,
     deleteUser,
 };
-
-
